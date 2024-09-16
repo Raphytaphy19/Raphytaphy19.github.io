@@ -2,21 +2,17 @@
 # Raphytaphy19.github.io
 # Raphytaphy19.github.io
 Pig
-# This is Markdown
 
-Markdown is my third favorite tool
+# Journal
 
+## question 1 summarize the importance of terminal, git, vim, and Markdown
 
-## Markdown Formatting
+First off the importance of the terminal is that you can work around your computer easily once you understand the codes. The importance of git is that it's a great way to start a website. Vim is important to know so that you can edit your website easily and the same goes for markdown. Markdown is great when you are trying to make headings.
 
-Format to have fun
+## question 2 share how you are feeling about all of this new technology
 
-### lists
+I feel very comfortable with all of this technology. I know how to work around the terminal very well and vim. the Git commands are sometimes difficult to do.
 
-This is an example of a list
+## question 3 give advice to future students 
 
-- first
-- second
-- third
-
-####
+My advice to future students is really take time to learn the basics because then everything will come easy.
