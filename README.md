@@ -1,6 +1,10 @@
 # Raphytaphy19.github.
 # Raphytaphy19.github.io
 # Raphytaphy19.github.io
+#This is my wonderful webstie
+
+My name is Raphael, I go to Arlington Career Center
+
 Pig
 
 # Journal
