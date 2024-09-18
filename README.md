@@ -5,6 +5,8 @@ This is my wonderful webstie
 
 My name is Raphael, I go to Arlington Career Center
 
+I play baseball
+
 Pig
 
 # Journal
