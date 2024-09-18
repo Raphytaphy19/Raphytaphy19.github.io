@@ -1,0 +1,64 @@
+Last login: Fri Sep  6 08:01:49 on ttys000
+1011305@1011305-student-HXJKD123265D ~ % date
+Fri Sep  6 08:08:10 EDT 2024
+1011305@1011305-student-HXJKD123265D ~ % ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pearson		Pictures	Public
+1011305@1011305-student-HXJKD123265D ~ % cd desktop
+1011305@1011305-student-HXJKD123265D desktop % mkdir quiz
+1011305@1011305-student-HXJKD123265D desktop % ls
+Screenshot 2024-08-28 at 11.20.28 AM.png	Screenshot 2024-09-05 at 10.44.05 AM.png	b.txt						terminal_practice
+Screenshot 2024-08-28 at 9.09.34 PM.png		Screenshot 2024-09-05 at 9.36.41 AM.png		cdls_quiz
+Screenshot 2024-08-29 at 2.59.38 PM.png		Screenshot 2024-09-05 at 9.42.59 AM.png		move_file_here
+Screenshot 2024-09-03 at 11.48.34 AM.png	Terminal Saved Output.txt			quiz
+1011305@1011305-student-HXJKD123265D desktop % cd quiz
+1011305@1011305-student-HXJKD123265D quiz % ls 
+1011305@1011305-student-HXJKD123265D quiz % mkdir move_me.txt
+1011305@1011305-student-HXJKD123265D quiz % ls
+move_me.txt
+1011305@1011305-student-HXJKD123265D quiz % mkdir copy_me.txt
+1011305@1011305-student-HXJKD123265D quiz % ls
+copy_me.txt	move_me.txt
+1011305@1011305-student-HXJKD123265D quiz % mkdir destination
+1011305@1011305-student-HXJKD123265D quiz % ls'
+quote> ls
+quote> cd ..
+quote> cd ..
+quote> cd quiz
+quote> ls
+quote> mkdir destination
+quote>                  
+1011305@1011305-student-HXJKD123265D quiz % 
+1011305@1011305-student-HXJKD123265D quiz % ls
+copy_me.txt	destination	move_me.txt
+1011305@1011305-student-HXJKD123265D quiz % mv move_me.txt destination
+1011305@1011305-student-HXJKD123265D quiz % ls
+copy_me.txt	destination
+1011305@1011305-student-HXJKD123265D quiz % cp copy_me.txt > destination
+zsh: is a directory: destination
+1011305@1011305-student-HXJKD123265D quiz % ls
+copy_me.txt	destination
+1011305@1011305-student-HXJKD123265D quiz % cp copy_me.txt
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file ... target_directory
+1011305@1011305-student-HXJKD123265D quiz % cp copy_me.txt -destination
+cp: copy_me.txt is a directory (not copied).
+1011305@1011305-student-HXJKD123265D quiz % rm copy_me.txt
+rm: copy_me.txt: is a directory
+1011305@1011305-student-HXJKD123265D quiz % ls
+copy_me.txt	destination
+1011305@1011305-student-HXJKD123265D quiz % cd copy_me.txt
+1011305@1011305-student-HXJKD123265D copy_me.txt % cp
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file ... target_directory
+1011305@1011305-student-HXJKD123265D copy_me.txt % cp copy_me.txt
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpsvXx] source_file ... target_directory
+1011305@1011305-student-HXJKD123265D copy_me.txt % cd ..
+1011305@1011305-student-HXJKD123265D quiz % ls
+copy_me.txt	destination
+1011305@1011305-student-HXJKD123265D quiz % cd copy_me.txt
+1011305@1011305-student-HXJKD123265D copy_me.txt % rm copy_me.txt
+rm: copy_me.txt: No such file or directory
+1011305@1011305-student-HXJKD123265D copy_me.txt % date
+Fri Sep  6 08:17:17 EDT 2024
+1011305@1011305-student-HXJKD123265D copy_me.txt % 
