@@ -21,6 +21,6 @@ These are my favorite cats
 | Tom | Chases jerry |
 | Meowth | Pokemon |
 
-![heres a picture of skibidi toilet](Skibidi toilet.png)
+![heres a picture of skibidi toilet](Skibiditoilet.png)
 
                             
