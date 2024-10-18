@@ -20,4 +20,6 @@ These are my favorite cats
 | Garfield | Fat |
 | Tom | Chases jerry |
 | Meowth | Pokemon |
-~                            
+
+![heres a picture of skibidi toilet](skibidi toilet.jpg)
+                            
