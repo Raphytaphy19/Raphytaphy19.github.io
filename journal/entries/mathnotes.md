@@ -6,7 +6,7 @@
 | ---             | ---      |
 | linear | $ f(x) = x$ |
 | quadratic | $ f(x) = x^2$ |
-| absolute value | $f(x) = \abs{x}$ |
+| absolute value | $f(x) = \lvert x \rvert$ |
 
 ## This is an example of the parent quadratic funtion
 
