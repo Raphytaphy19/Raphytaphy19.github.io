@@ -1,0 +1,12 @@
+body{
+        background-color:teal
+	}
+header{
+        background-color:skyblue
+	}
+th, td{
+        border:2px solid;
+        border-collapse:collapse;
+	background color:skyblue;
+        }
+    
