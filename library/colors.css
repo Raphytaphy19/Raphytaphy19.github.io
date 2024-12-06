@@ -1,16 +1,16 @@
 
-body.first-color { 
+header { 
 	background: #233142; 
 }
 	
-.second-color { 
+body  { 
 	background: #455d7a; 
 }
 
-.third-color { 
+section  { 
 	background: #f95959; 
 }
 
-.fourth-color { 
+footer { 
 	background: #e3e3e3; 
 }
