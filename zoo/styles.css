@@ -9,4 +9,9 @@ th, td{
         border-collapse:collapse;
 	background color:skyblue;
         }
-    
+p{
+	font-family:"impact";
+}
+h1{
+	font-family:"roboto";
+}	
