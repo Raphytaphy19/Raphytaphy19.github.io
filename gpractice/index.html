@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+	<title>Welcome to my recipes page!</title>
+	<script src="../js/init.js"></script>
+<style>
+  #grid{
+	display:grid;
+	grid-template-rows: 1fr 3fr 1fr;
+	grid-template-columns: 1fr 3fr 1fr;
+	height:80vh;
+	gap:10px;
+}
+  #a{
+	grid-column:1/4;
+	background-color: green;
+}
+  #b{
+	grid-column:1;
+	grid-row:2/3;
+	background-color: green;
+}
+  #c{
+	grid-column:2/3;
+	grid-row:2/3;
+	background-color: green;
+}
+  #d{
+        grid-column:4;
+        grid-row:2/3;
+        background-color: green;
+}
+  #e{
+        grid-column:1/4;
+	grid-row:4;
+        background-color: green;
+}
+</style>
+  </head>
+  <body>
+  <div id="grid">
+	<div id="a"></div>
+	<div id="b"></div>
+	<div id="c"></div>
+        <div id="d"></div>
+        <div id="e"></div>
+
+  </div>
+  </body>
+</html>
