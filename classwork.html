@@ -4,12 +4,56 @@
 	<title>Classwork</title>
 	<script src="../js/init.js"></script>
 	<link rel="stylesheet" type="text/css" href="index.css">
+<style>
+  #grid{
+	display:grid;
+	grid-template-rows: 1fr 3fr 1fr;
+	grid-template-columns: 1fr 3fr 1fr;
+	height:80vh;
+	gap:10px;
+	font-size:36pt;
+}
+  #a{
+	grid-column:1/4;
+	background-color: green;
+}
+  #b{
+	grid-column:1;
+	grid-row:2/3;
+	background-color: green;
+}
+  #c{
+	grid-column:2/3;
+	grid-row:2/3;
+	background-color: green;
+}
+  #d{
+        grid-column:3;
+        grid-row:2/3;
+        background-color: green;
+}
+  #e{
+        grid-column:1/4;
+	grid-row:3;
+        background-color: green;
+}
+</style>
 </head>
 <body>
-<header>
-	div id="title"
-	<h1>my classwork</h1>
+<div id="grid">
+	<div id="a">
+My projects
 </div>
-</header>
-<main>
-<div class="parent">
+	<div id="b">
+<a href="recipes/index.html">recipes</a>
+<a href="zoo/index.html">zoo></a>
+<a href="library/index.html">library</a>
+<a href="journal/entries">journal</a>
+</div>
+	<div id="c"></div>
+        <div id="d"></div>
+        <div id="e"></div>
+
+  </div>
+  </body>
+</html>
