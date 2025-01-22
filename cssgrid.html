@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>10x10 Grid with CSS Grid</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      width: 100vmin;
+      height: 100vmin;
+      margin:auto;
+    }
+
+    .grid-container div {
+      background-color: #ddd;
+      border: 1px solid #fff; /* Optional border for better visual separation */
+    }
+    
+     /* Color specific squares */
+    .grid-container div:nth-child(1),
+    .grid-container div:nth-child(2),
+    .grid-container div:nth-child(3),
+   .grid-container div:nth-child(4),
+    .grid-container div:nth-child(5),
+    .grid-container div:nth-child(6),
+   .grid-container div:nth-child(7),
+    .grid-container div:nth-child(8),
+    .grid-container div:nth-child(9),
+   .grid-container div:nth-child(10),
+    .grid-container div:nth-child(11),
+    .grid-container div:nth-child(12),
+   .grid-container div:nth-child(15),
+    .grid-container div:nth-child(19),
+    .grid-container div:nth-child(20){
+        background-color: grey;
+}
+    /* Color specific squares */
+    .grid-container div:nth-child(13),
+    .grid-container div:nth-child(14),
+    .grid-container div:nth-child(16),
+   .grid-container div:nth-child(17),
+    .grid-container div:nth-child(18),
+    .grid-container div:nth-child(21),
+   .grid-container div:nth-child(22),
+    .grid-container div:nth-child(23),
+    .grid-container div:nth-child(24),
+   .grid-container div:nth-child(25),
+    .grid-container div:nth-child(26),
+    .grid-container div:nth-child(27),
+   .grid-container div:nth-child(28),
+    .grid-container div:nth-child(29),
+    .grid-container div:nth-child(30){
+        background-color: #87ceeb;
+}
+ /* Color specific squares */
+ .grid-container div:nth-child(9),
+   .grid-container div:nth-child(10),
+.grid-container div:nth-child(19),
+   .grid-container div:nth-child(20)
+{
+  background-color: yellow; 
+}
+ /*
+        We can use this syntax to select a range:
+        - `div:nth-child(n+41)`: Selects all `div` elements that are the 41st child or later.
+        - `:nth-child(-n+50)`: Selects all `div` elements that are the 50th child or earlier.
+    */
+    .grid-container div:nth-child(n+31):nth-child(-n+70) {
+      background-color: #87ceeb;
+    }
+ .grid-container div:nth-child(n+71):nth-child(-n+90) {
+      background-color: #008000;
+    }
+ .grid-container div:nth-child(n+91):nth-child(-n+100) {
+      background-color: #4f3727;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <!-- 100 divs -->
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+</body>
+</html>
