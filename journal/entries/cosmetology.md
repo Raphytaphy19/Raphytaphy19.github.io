@@ -1,7 +1,7 @@
 # This is my entry for how this project went.
 
 I had a fun time working on this project especially because it was fun to be working with a friend. Even though we were creating different pages we were still on the same team. We didn't run into any trouble with pull requests and merging.
-[project]
+[project](file:///Users/1011305/Desktop/projectCR/index.html)
 ![photos](../hairstyling.png)
 ![photos](../hairbooking.png)
 
