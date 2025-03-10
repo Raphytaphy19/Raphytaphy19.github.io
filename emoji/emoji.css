@@ -21,7 +21,6 @@ footer{
     overflow: hidden;
     box-shadow: 30px 30px 35px rgba(0,0,0,0.25);
 }
-
 .eyes {
   position: absolute;
   display: flex;
@@ -31,6 +30,13 @@ footer{
   width: 100%;
   top: 30%; /* Adjust this value to position the eyes vertically */
 }
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 .eye {
   width: 50px;
   height: 70px;
@@ -38,6 +44,7 @@ footer{
   border-radius: 50%;
   border: 3px solid #000;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  animation: bounce 1s infinite;
 }
 
 .left {
