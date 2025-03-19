@@ -6,6 +6,12 @@ body{
 	background: #455d7a;
 	font-size:36pt;
 	font-family:"impact", sans-serif; 
+	display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr 1f;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
 }
 
 h1{ 
@@ -16,10 +22,66 @@ h1{
   font-style: normal;
   font-variation-settings:
     "MORF" 0;
-
+   grid-column: span 2;
+   text-align: center;
 }
 
 p{ 
 	background: #e3e3e3; 
 }
+               
+            .content {
+                grid-column: span 2;
+            }
 
+            .button {
+                background-color: #3498db;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .button:hover {
+                background-color: #2ecc71;
+            }
+
+            footer {
+                grid-column: span 2;
+                text-align: center;
+            }
+
+            video {
+                justify-self: center;
+            }
+	 @media (max-width: 768px) {
+                body {
+                    grid-template-columns: 1fr;
+                }
+
+                h1, .content, footer {
+                    grid-column: span 1;
+                }
+
+                video {
+                    width: 100%;
+                }
+            }
+            @media (max-width: 480px) {
+                body {
+                    grid-template-columns: 1fr;
+                    gap: 10px;
+                }
+
+                h1 {
+                    font-size: 24px;
+                }
+
+                .button {
+                    font-size: 14px;
+                    padding: 8px 16px;
+                }
+            }
