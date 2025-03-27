@@ -1,6 +1,6 @@
 # Exam practice
 
-##character encoding
+## character encoding
 
 nothing to pracitce with this so I decided to just read about it and make a journal.
 
