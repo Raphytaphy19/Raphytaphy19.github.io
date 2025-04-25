@@ -20,8 +20,10 @@ function drawCircle(x, y, r, color) {
     ctx.fill();
 }
 
-drawCircle(110, 200, 50, "blue"); // Draw a blue circle
-drawCircle(110, 120, 50, "pink"); // Draw a pink circle
+drawCircle(110, 200, 50, "blue");
+drawCircle(110, 120, 50, "pink"); 
+drawCircle(160, 200, 50, "orange");
+drawCircle(160, 120, 50, "teal");
 
 // Triangle
 function drawTriangle(color) {
@@ -34,7 +36,7 @@ function drawTriangle(color) {
     ctx.fill();
 }
 
-drawTriangle("yellow"); // Draw a yellow triangle
+drawTriangle("yellow");
 
 // Rectangle
 function drawRectangle(x, y, width, height, color) {
@@ -42,5 +44,5 @@ function drawRectangle(x, y, width, height, color) {
     ctx.fillRect(x, y, width, height);
 }
 
-drawRectangle(50, 250, 100, 50, "red"); // draw a red triangle
-
+drawRectangle(50, 250, 100, 50, "red");
+drawRectangle(100, 250, 100, 50, "purple"); 
