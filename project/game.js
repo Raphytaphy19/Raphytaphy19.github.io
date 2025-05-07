@@ -1,0 +1,29 @@
+Game idea is a soccer ball that you move to score a goal but there is a goalie having an automatic movement
+
+
+const canvas = document. getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "light blue";
+ctx.fillRect(0,0,400,400);
+
+function rectangle(x,y,r){
+   ctx.beginPath();
+   ctx.arc(x,y,r,0,2*Math.PI);
+   ctx.fill();
+}
+function drawCircle(x, y, r, color) {
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, 2 * Math.PI);
+    ctx.fill();
+}
+drawCircle(160, 200, 50, “pink”)
+
+function drawRectangle(x, y, width, height, color) {
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, width, height);
+}
+
+drawRectangle(50, 250, 100, 50, "red");
+
