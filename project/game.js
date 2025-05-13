@@ -31,6 +31,7 @@ function drawScore() {
     ctx.fillStyle = "black";
     ctx.font = "20px Arial";
     ctx.fillText("Score: " + score, 10, 30);
+    drawScore()
 }    
  
     rect.y += rect.velocityY;
@@ -40,8 +41,6 @@ function drawScore() {
 
     drawRectangle(rect.x, rect.y, rect.width, rect.height, rect.color);
     drawCircle(circle.x, circle.y, circle.r, circle.color);
-
-    requestAnimationFrame(update);
 }
 
 document.addEventListener("keydown", (event) => {
@@ -78,6 +77,7 @@ function update() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     drawCircle(circle.x, circle.y, circle.r, circle.color);
+    drawRectangle(rect.x, rect.y, rect.width, rect.height, rect.color);
     drawScore();
 
     requestAnimationFrame(update);
