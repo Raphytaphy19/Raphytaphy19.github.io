@@ -27,7 +27,12 @@ function update() {
     ctx.fillStyle = "lightblue";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-     
+function drawScore() {
+    ctx.fillStyle = "black";
+    ctx.font = "20px Arial";
+    ctx.fillText("Score: " + score, 10, 30);
+}    
+ 
     rect.y += rect.velocityY;
     if (rect.y <= 0 || rect.y + rect.height >= canvas.height) {
         rect.velocityY *= -1;
