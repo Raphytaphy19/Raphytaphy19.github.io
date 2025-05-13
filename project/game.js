@@ -22,7 +22,6 @@ function drawRectangle(x, y, width, height, color) {
 }
 
 drawRectangle(350, 150, 50, 100, "red");
-function update() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "lightblue";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -41,7 +40,7 @@ function drawScore() {
 
     drawRectangle(rect.x, rect.y, rect.width, rect.height, rect.color);
     drawCircle(circle.x, circle.y, circle.r, circle.color);
-}
+
 
 document.addEventListener("keydown", (event) => {
     const speed = 25;
@@ -78,7 +77,13 @@ function update() {
 
     drawCircle(circle.x, circle.y, circle.r, circle.color);
     drawRectangle(rect.x, rect.y, rect.width, rect.height, rect.color);
-    drawScore();
+    drawScore()
+
+    rect.y += rect.velocityY;
+    if (rect.y <= 0 || rect.y + rect.height >= canvas.height) {
+        rect.velocityY *= -1;
+    }
+
 
     requestAnimationFrame(update);
 }
