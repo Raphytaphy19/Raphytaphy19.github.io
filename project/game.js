@@ -1,4 +1,4 @@
-const canvas = document. getElementById("myCanvas");
+const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
 canvas.width = 400;
@@ -14,43 +14,20 @@ function drawCircle(x, y, r, color) {
     ctx.arc(x, y, r, 0, 2 * Math.PI);
     ctx.fill();
 }
-drawCircle(160, 200, 40, "pink")
 
 function drawRectangle(x, y, width, height, color) {
     ctx.fillStyle = color;
     ctx.fillRect(x, y, width, height);
 }
 
-drawRectangle(350, 150, 50, 100, "red");
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "lightblue";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
 function drawScore() {
     ctx.fillStyle = "black";
     ctx.font = "20px Arial";
     ctx.fillText("Score: " + score, 10, 30);
-    drawScore()
-}    
- 
-    rect.y += rect.velocityY;
-    if (rect.y <= 0 || rect.y + rect.height >= canvas.height) {
-        rect.velocityY *= -1;
-    }
-
-    drawRectangle(rect.x, rect.y, rect.width, rect.height, rect.color);
-    drawCircle(circle.x, circle.y, circle.r, circle.color);
-
+}
 
 document.addEventListener("keydown", (event) => {
-    const speed = 25;
-    if (event.key === "ArrowLeft") circle.x -= speed;
-    if (event.key === "ArrowRight") circle.x += speed;
-    if (event.key === "ArrowUp") circle.y -= speed;
-    if (event.key === "ArrowDown") circle.y += speed;
-});
-document.addEventListener("keydown", (event) => {
-    const speed = 20; // Circle movement speed
+    const speed = 20; 
 
     if (event.key === "ArrowLeft") {
         circle.x -= speed;
@@ -58,8 +35,15 @@ document.addEventListener("keydown", (event) => {
     }
     if (event.key === "ArrowRight") {
         circle.x += speed;
-        if (circle.x - circle.r > canvas.width) circle.x = -circle.r;
-	score++;
+        if (circle.x - circle.r > canvas.width) {
+            if (!passedThroughWall) {
+                score++; // Increment the score
+                passedThroughWall = true;
+            }
+            circle.x = -circle.r; // Wrap around to the left
+        } else {
+            passedThroughWall = false; // Reset the flag when the circle is not crossing
+        }
     }
     if (event.key === "ArrowUp") {
         circle.y -= speed;
@@ -67,9 +51,10 @@ document.addEventListener("keydown", (event) => {
     }
     if (event.key === "ArrowDown") {
         circle.y += speed;
-        if (circle.y - circle.r > canvas.height) circle.y = -circle.r; 
+        if (circle.y - circle.r > canvas.height) circle.y = -circle.r;
     }
 });
+
 function update() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "lightblue";
@@ -77,15 +62,22 @@ function update() {
 
     drawCircle(circle.x, circle.y, circle.r, circle.color);
     drawRectangle(rect.x, rect.y, rect.width, rect.height, rect.color);
-    drawScore()
+
+    drawScore();
 
     rect.y += rect.velocityY;
     if (rect.y <= 0 || rect.y + rect.height >= canvas.height) {
         rect.velocityY *= -1;
     }
+    const distX = Math.abs(circle.x - (rect.x + rect.width / 2));
+    const distY = Math.abs(circle.y - (rect.y + rect.height / 2));
 
-
+    if (
+        distX <= rect.width / 2 + circle.r &&
+        distY <= rect.height / 2 + circle.r
+    ) {
+        score = 0; // Reset score
+    }
     requestAnimationFrame(update);
 }
-
 update();
