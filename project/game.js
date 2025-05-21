@@ -8,6 +8,11 @@ const circle = { x: 160, y: 200, r: 40, color: "pink" };
 const rect = { x: 350, y: 150, width: 50, height: 100, color: "red", velocityY: 5 };
 let score = 0;
 
+let isShooting = false;
+const shootingSpeed = 12;
+
+let passedThroughWall = false;
+
 function drawCircle(x, y, r, color) {
     ctx.fillStyle = color;
     ctx.beginPath();
@@ -42,7 +47,7 @@ document.addEventListener("keydown", (event) => {
             }
             circle.x = -circle.r; // Wrap around to the left
         } else {
-            passedThroughWall = false; // Reset the flag when the circle is not crossing
+            passedThroughWall = false;
         }
     }
     if (event.key === "ArrowUp") {
@@ -53,13 +58,28 @@ document.addEventListener("keydown", (event) => {
         circle.y += speed;
         if (circle.y - circle.r > canvas.height) circle.y = -circle.r;
     }
+  if (event.key === " " && circle.x >= canvas.width / 2 && !isShooting) {
+        isShooting = true;
 });
 
 function update() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "lightblue";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+ 
+ if (isShooting) {
+        circle.x += shootingSpeed;
 
+        // If circle passes right wall
+        if (circle.x - circle.r > canvas.width) {
+            if (!passedThroughWall) {
+                score++;
+                passedThroughWall = true;
+            }
+            circle.x = -circle.r; // wrap to left
+            isShooting = false;   // stop shooting
+        }
+    }
     drawCircle(circle.x, circle.y, circle.r, circle.color);
     drawRectangle(rect.x, rect.y, rect.width, rect.height, rect.color);
 
