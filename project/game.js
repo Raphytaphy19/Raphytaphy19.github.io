@@ -58,8 +58,9 @@ document.addEventListener("keydown", (event) => {
         circle.y += speed;
         if (circle.y - circle.r > canvas.height) circle.y = -circle.r;
     }
-  if (event.key === " " && circle.x >= canvas.width / 2 && !isShooting) {
+    if (event.key === " " && circle.x >= canvas.width / 2 && !isShooting) {
         isShooting = true;
+    }
 });
 
 function update() {
@@ -70,14 +71,13 @@ function update() {
  if (isShooting) {
         circle.x += shootingSpeed;
 
-        // If circle passes right wall
         if (circle.x - circle.r > canvas.width) {
             if (!passedThroughWall) {
                 score++;
                 passedThroughWall = true;
             }
-            circle.x = -circle.r; // wrap to left
-            isShooting = false;   // stop shooting
+            circle.x = -circle.r; 
+            isShooting = false;   
         }
     }
     drawCircle(circle.x, circle.y, circle.r, circle.color);
@@ -96,7 +96,7 @@ function update() {
         distX <= rect.width / 2 + circle.r &&
         distY <= rect.height / 2 + circle.r
     ) {
-        score = 0; // Reset score
+        score = 0;
     }
     requestAnimationFrame(update);
 }
