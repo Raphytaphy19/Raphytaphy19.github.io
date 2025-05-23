@@ -42,10 +42,10 @@ document.addEventListener("keydown", (event) => {
         circle.x += speed;
         if (circle.x - circle.r > canvas.width) {
             if (!passedThroughWall) {
-                score++; // Increment the score
+                score++;
                 passedThroughWall = true;
             }
-            circle.x = -circle.r; // Wrap around to the left
+            circle.x = -circle.r;
         } else {
             passedThroughWall = false;
         }
