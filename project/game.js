@@ -5,7 +5,7 @@ canvas.width = 400;
 canvas.height = 400;
 
 const circle = { x: 160, y: 200, r: 40, color: "pink" };
-const rect = { x: 350, y: 150, width: 50, height: 100, color: "red", velocityY: 5 };
+const rect = { x: 350, y: 150, width: 50, height: 100, color: "red", velocityY: 10 };
 let score = 0;
 
 let isShooting = false;
@@ -34,32 +34,30 @@ function drawScore() {
 document.addEventListener("keydown", (event) => {
     const speed = 20; 
 
-    if (event.key === "ArrowLeft") {
-        circle.x -= speed;
-        if (circle.x + circle.r < 0) circle.x = canvas.width + circle.r;
-    }
-    if (event.key === "ArrowRight") {
-        circle.x += speed;
-        if (circle.x - circle.r > canvas.width) {
-            if (!passedThroughWall) {
-                score++;
-                passedThroughWall = true;
+    if (!isShooting) {
+        if (event.key === "ArrowLeft") {
+            circle.x -= speed;
+            if (circle.x - circle.r < 0) circle.x = circle.r;
+        }
+        if (event.key === "ArrowRight") {
+            if (circle.x + speed <= canvas.width / 3) {
+                circle.x += speed;
+            } else {
+                circle.x = canvas.width / 3;
             }
-            circle.x = -circle.r;
-        } else {
             passedThroughWall = false;
         }
-    }
-    if (event.key === "ArrowUp") {
-        circle.y -= speed;
-        if (circle.y + circle.r < 0) circle.y = canvas.height + circle.r;
-    }
-    if (event.key === "ArrowDown") {
-        circle.y += speed;
-        if (circle.y - circle.r > canvas.height) circle.y = -circle.r;
-    }
-    if (event.key === " " && circle.x >= canvas.width / 2 && !isShooting) {
-        isShooting = true;
+        if (event.key === "ArrowUp") {
+            circle.y -= speed;
+            if (circle.y - circle.r < 0) circle.y = circle.r;
+        }
+        if (event.key === "ArrowDown") {
+            circle.y += speed;
+            if (circle.y + circle.r > canvas.height) circle.y = canvas.height - circle.r;
+        }
+        if (event.key === " " && circle.x <= canvas.width / 2 && !isShooting) {
+            isShooting = true;
+        }
     }
 });
 
