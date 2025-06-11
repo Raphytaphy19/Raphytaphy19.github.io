@@ -1,132 +1,69 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta name="generator" content=
-  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 10700), see www.w3.org">
-
-  <title>Pao de queijo</title>
-  <script src="../js/init.js">
-</script>
+  <title>Pão de Queijo | Raphael's Recipes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <h1>My favorite pao de queijo</h1><a href="#recipe">Jump to
-  recipe</a>
-
-  <h1>Here is a photo of pao de queijo</h1><img src=
-  "cheesebread.png" alt="cheesebread">
-
-  <h2>background</h2>
-
-  <p>Pao de Queijo is a traditional brazilian dish that is cheese
-  inside a specific type of bread. The bread is circular and has a
-  lot of air in it. I selected this recipe because my family always makes pao de queijo. Everyone from my grandma to my uncles and aunts all make it. Whenever I have pao de queijo it just has a special place in my heart. One good tip is not to let them get to burnt at the bottom and remember they must be eaten warm. Another tip is that whenever you are making pao de queijo you have to pay close attention to time because if you overcook something or wait to long it could turn out mushy or very hard depending on how you cook it.</p>
-
-  <h2>family</h2><q>Pao de queijo has been in our family for so
-  many years it is an amazing tradition to make.</q>
-
-  <p>Bianca Bass</p>
-
-  <h2 id="recipe">the Recipe</h2>
-
-  <table>
-    <caption>
-      My pao de queijo recipe
-    </caption>
-
-    <thead>
-      <tr>
-        <th style="border:1px solid">ingredients</th>
-
-        <th style="border:1px solid">amount</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td style="border:1px solid">large egg</td>
-
-        <td style="border:1px solid">1</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">canola oil</td>
-
-        <td style="border:1px solid">1/4 cup</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">milk</td>
-
-        <td style="border:1px solid">2/3 cup</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">tapioca flour</td>
-
-        <td style="border:1px solid">1 1/2 cups</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">salt</td>
-
-        <td style="border:1px solid">3/4 teaspoon</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">shredded cheese</td>
-
-        <td style="border:1px solid">1/2 cup</td>
-      </tr>
-
-      <tr>
-        <th colspan="2" style="border:1px solid">instructions</th>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 1</td>
-
-        <td style="border:1px solid">preheat oven 400 degrees F.
-        Lightly grease a mini muffin tin.</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 2</td>
-
-        <td style="border:1px solid">blend the egg, oil, milk,
-        flour, and salt until it's smooth. then add the cheese and
-        process it all.</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 3</td>
-
-        <td style="border:1px solid">stir the batter very well and
-        then pour the mixture into the muffin tin cups nearly to
-        the top.</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 4</td>
-
-        <td style="border:1px solid">bake for 15-20 minutes until
-        very light golden brown.</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 5</td>
-
-        <td style="border:1px solid">take out of the oven.</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 6</td>
-
-        <td style="border:1px solid">wait a minute or two then
-        enjoy.</td>
-      </tr>
-    </tbody>
-  </table>
+  <header>
+    <h1>Pão de Queijo</h1>
+    <nav>
+      <a href="index.html" class="nav-link">← Back to Recipes</a>
+    </nav>
+    <p class="subtitle">My favorite Brazilian cheese bread recipe</p>
+  </header>
+  <main class="recipe-main">
+    <section class="recipe-intro">
+      <a href="#recipe" class="btn jump-link">Jump to recipe ↓</a>
+      <div class="recipe-image-container">
+        <img src="cheesebread.png" alt="Photo of pao de queijo" class="recipe-image">
+      </div>
+      <h2>Background</h2>
+      <p>
+        Pão de Queijo is a traditional Brazilian dish that is cheese inside a specific type of bread. The bread is circular and has a lot of air in it. I selected this recipe because my family always makes pão de queijo. Everyone from my grandma to my uncles and aunts all make it. Whenever I have pão de queijo it just has a special place in my heart. One good tip is not to let them get too burnt at the bottom and remember they must be eaten warm. Another tip is that whenever you are making pão de queijo you have to pay close attention to time because if you overcook something or wait too long it could turn out mushy or very hard depending on how you cook it.
+      </p>
+      <h2>Family</h2>
+      <blockquote>
+        “Pão de queijo has been in our family for so many years; it is an amazing tradition to make.”
+        <br><span class="quote-author">— Bianca Bass</span>
+      </blockquote>
+    </section>
+    <section class="recipe-section" id="recipe">
+      <h2>The Recipe</h2>
+      <div class="recipe-table-container">
+        <table class="recipe-table">
+          <caption>My pão de queijo recipe</caption>
+          <thead>
+            <tr>
+              <th>Ingredient</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Large egg</td><td>1</td></tr>
+            <tr><td>Canola oil</td><td>1/4 cup</td></tr>
+            <tr><td>Milk</td><td>2/3 cup</td></tr>
+            <tr><td>Tapioca flour</td><td>1 1/2 cups</td></tr>
+            <tr><td>Salt</td><td>3/4 teaspoon</td></tr>
+            <tr><td>Shredded cheese</td><td>1/2 cup</td></tr>
+            <tr>
+              <th colspan="2" style="text-align:center;">Instructions</th>
+            </tr>
+            <tr><td>Step 1</td><td>Preheat oven to 400°F. Lightly grease a mini muffin tin.</td></tr>
+            <tr><td>Step 2</td><td>Blend the egg, oil, milk, flour, and salt until smooth. Then add the cheese and process it all.</td></tr>
+            <tr><td>Step 3</td><td>Stir the batter very well and then pour the mixture into the muffin tin cups nearly to the top.</td></tr>
+            <tr><td>Step 4</td><td>Bake for 15-20 minutes until very light golden brown.</td></tr>
+            <tr><td>Step 5</td><td>Take out of the oven.</td></tr>
+            <tr><td>Step 6</td><td>Wait a minute or two then enjoy.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Raphael's Recipes. All rights reserved.
+  </footer>
 </body>
 </html>
