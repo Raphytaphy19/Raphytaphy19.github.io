@@ -1,144 +1,70 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta name="generator" content=
-  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 10700), see www.w3.org">
-
-  <title>Panqueca</title>
-  <script src="../js/init.js">
-</script>
+  <title>Panqueca | Raphael's Recipes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <h1>My favorite panqueca</h1><a href="#recipe">Jump to recipe</a>
-
-  <h1>Here is a photo of panqueca</h1><img src=
-  "panqueca.png" alt="panqueca">
-
-  <h2>background</h2>
-
-  <p>Panqueca is a portuguese way of making crepes. it's called
-  panqueca because it's a pancake rolled up. Mainly my family makes
-  it with just cheese but other people put all kinds of things. I
-  chose this because it is a weekly usual at my house and it tastes
-  amazing. One tip is not to put to much cheese. Personally I like
-  these somewhat burnt so I like to have mine in the oven a bit
-  more than what it says. I reccomend the burnt ones more than the
-  non burnt.</p>
-
-  <h2>family</h2><q>Don't make panqueca like tia lia she puts to
-  much cheese.</q>
-
-  <p>Bianca Bass</p>
-
-  <h2 id="recipe">the Recipe</h2>
-
-  <table>
-    <caption>
-      My panqueca recipe
-    </caption>
-
-    <thead>
-      <tr>
-        <th style="border:1px solid">ingredients</th>
-
-        <th style="border:1px solid">amount</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td style="border:1px solid">flour</td>
-
-        <td style="border:1px solid">2 cups</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">salt</td>
-
-        <td style="border:1px solid">1 teaspoon</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">milk</td>
-
-        <td style="border:1px solid">2 cups</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">egg</td>
-
-        <td style="border:1px solid">2</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">oil</td>
-
-        <td style="border:1px solid">1 tablespoon</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">cheese stick</td>
-
-        <td style="border:1px solid">1 for each panqueca</td>
-      </tr>
-
-      <tr>
-        <th colspan="2" style="border:1px solid">instructions</th>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 1</td>
-
-        <td style="border:1px solid">In a blender put milk, eggs,
-        and oil. blend and add some flour a bit at a time.</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 2</td>
-
-        <td style="border:1px solid">blend until the liquid is
-        uniform.</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 3</td>
-
-        <td style="border:1px solid">heat a pan to a medium
-        temperature and use a ladle to put some of the liquid
-        covering the bottom of the pan.</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 4</td>
-
-        <td style="border:1px solid">fry both sides until it turns
-        golden brownish.</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 5</td>
-
-        <td style="border:1px solid">Put the pancake on a plate and
-        add cheese to them.</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 6</td>
-
-        <td style="border:1px solid">put the rolled pancakes on a
-        tray and put it on a preheated oven 160C for 10-15
-        min.</td>
-      </tr>
-
-      <tr>
-        <td style="border:1px solid">Step 7</td>
-
-        <td style="border:1px solid">check every 5 minutes once
-        ready enjoy.</td>
-      </tr>
-    </tbody>
-  </table>
+  <header>
+    <h1>Panqueca</h1>
+    <nav>
+      <a href="index.html" class="nav-link">← Back to Recipes</a>
+    </nav>
+    <p class="subtitle">My favorite Portuguese-style crepe recipe</p>
+  </header>
+  <main class="recipe-main">
+    <section class="recipe-intro">
+      <a href="#recipe" class="btn jump-link">Jump to recipe ↓</a>
+      <div class="recipe-image-container">
+        <img src="panqueca.png" alt="Photo of panqueca" class="recipe-image">
+      </div>
+      <h2>Background</h2>
+      <p>
+        Panqueca is a Portuguese way of making crepes. It's called panqueca because it's a pancake rolled up. Mainly my family makes it with just cheese, but other people put all kinds of things. I chose this because it is a weekly usual at my house and it tastes amazing. One tip is not to put too much cheese. Personally, I like these somewhat burnt so I like to have mine in the oven a bit more than what it says. I recommend the burnt ones more than the non-burnt.
+      </p>
+      <h2>Family</h2>
+      <blockquote>
+        “Don't make panqueca like tia lia; she puts too much cheese.”
+        <br><span class="quote-author">— Bianca Bass</span>
+      </blockquote>
+    </section>
+    <section class="recipe-section" id="recipe">
+      <h2>The Recipe</h2>
+      <div class="recipe-table-container">
+        <table class="recipe-table">
+          <caption>My panqueca recipe</caption>
+          <thead>
+            <tr>
+              <th>Ingredient</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Flour</td><td>2 cups</td></tr>
+            <tr><td>Salt</td><td>1 teaspoon</td></tr>
+            <tr><td>Milk</td><td>2 cups</td></tr>
+            <tr><td>Egg</td><td>2</td></tr>
+            <tr><td>Oil</td><td>1 tablespoon</td></tr>
+            <tr><td>Cheese stick</td><td>1 for each panqueca</td></tr>
+            <tr>
+              <th colspan="2" style="text-align:center;">Instructions</th>
+            </tr>
+            <tr><td>Step 1</td><td>In a blender put milk, eggs, and oil. Blend and add some flour a bit at a time.</td></tr>
+            <tr><td>Step 2</td><td>Blend until the liquid is uniform.</td></tr>
+            <tr><td>Step 3</td><td>Heat a pan to a medium temperature and use a ladle to put some of the liquid covering the bottom of the pan.</td></tr>
+            <tr><td>Step 4</td><td>Fry both sides until it turns golden brownish.</td></tr>
+            <tr><td>Step 5</td><td>Put the pancake on a plate and add cheese to them.</td></tr>
+            <tr><td>Step 6</td><td>Put the rolled pancakes on a tray and put it in a preheated oven (160°C) for 10-15 minutes.</td></tr>
+            <tr><td>Step 7</td><td>Check every 5 minutes. Once ready, enjoy.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Raphael's Recipes. All rights reserved.
+  </footer>
 </body>
 </html>
